@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Inder&family=Lexend+Tera:wght@100..900&family=Radio+Canada:ital,wght@0,300..700;1,300..700&family=Slackside+One&family=Sniglet:wght@400;800&display=swap");
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  #weatherBox {
+    background: linear-gradient(to bottom, white, #a1caf1);
+    color: white;
+    width: 420px;
+    height: 78px;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/weatherImages/cityONE.jpg);
+    #weatherContent {
+      position: relative;
+      width: 94%;
+      height: 90%;
+      display: grid;
+      align-items: center;
+      form {
+        padding: 7.5px;
+        width: 100%;
+        height: 70.2px;
+        display: grid;
+        grid-template-columns: 6fr 1fr;
+        border-radius: 7.5px;
+        input {
+          font-size: 18px;
+          border: none;
+          font-family: "Sniglet", system-ui;
+          border-radius: 50px;
+          text-align: center;
+          &:focus {
+            outline: none;
+          }
+        }
+
+        button {
+          border: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: none;
+
+          ion-icon {
+            font-size: 38px;
+          }
+        }
+      }
+
+      #buttonBox {
+        border-radius: 7.5px;
+        width: 100%;
+        height: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        .boxButton {
+          width: 100px;
+          height: 30px;
+          border: none;
+          border-radius: 5px;
+          font-family: "Sniglet", system-ui;
+          letter-spacing: 0.8px;
+          cursor: grab;
+          position: relative;
+          overflow: hidden;
+        }
+      }
+      #weatherDisplay {
+        display: grid;
+        height: 0px;
+        border-radius: 7.5px;
+        grid-template-rows: repeat(3, 1fr);
+        #general {
+          height: 0px;
+          position: relative;
+          display: grid;
+          justify-content: center;
+          align-items: center;
+          grid-template-columns: 2.55fr 1.45fr;
+          #location {
+            height: 0px;
+            display: grid;
+            align-items: center;
+            grid-template-columns: 1.85fr 1.15fr;
+            #Input {
+              height: 0px;
+              flex-direction: column;
+              #input1 {
+                font-family: "Sniglet", system-ui;
+                font-size: 0em;
+                text-align: center;
+              }
+              #input2 {
+                position: relative;
+                font-family: "Slackside One", cursive;
+                text-align: center;
+                font-size: 0em;
+              }
+            }
+
+            #temperature {
+              height: 0px;
+              width: 0px;
+              text-align: center;
+              font-family: "Radio Canada", sans-serif;
+              font-weight: 700;
+              font-size: 0;
+            }
+          }
+          #weatherImage {
+            width: 0px;
+            height: 0px;
+            @include flex();
+            img {
+              width: 70%;
+              height: 70%;
+              object-fit: contain;
+            }
+          }
+        }
+        #otherConditions {
+          width: 0px;
+          height: 0px;
+          display: grid;
+          align-items: center;
+          grid-template-columns: repeat(3, 1fr);
+          column-gap: 20px;
+          margin-bottom: 10px;
+          #wind,
+          #humidity,
+          #pressure {
+            height: 0px;
+            display: grid;
+            grid-template-rows: repeat(3, 1fr);
+            .image {
+              width: 0px;
+              height: 0px;
+              @include flex();
+              img {
+                width: 0px;
+                height: 0px;
+                object-fit: contain;
+              }
+            }
+            .condition {
+              font-family: "Sniglet", system-ui;
+              text-align: center;
+              font-size: 0px;
+            }
+            .numberValue {
+              font-size: 0px;
+              font-family: "Radio Canada", sans-serif;
+              text-align: center;
+            }
+          }
+        }
+        #futureForecast {
+          display: grid;
+          grid-template-rows: repeat(3, 1fr);
+          align-items: center;
+          color: white;
+          .day {
+            width: 0px;
+            height: 0px;
+            display: grid;
+            grid-template-columns: 1.5fr 2fr 1fr;
+            align-items: center;
+            column-gap: 10px;
+            > :first-child {
+              font-size: 0px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 0px;
+              width: 0px;
+              font-family: "Sniglet", system-ui;
+            }
+            .secondClass {
+              height: 0px;
+              font-size: 0px;
+              width: 0px;
+              display: grid;
+              grid-template-columns: 0.75fr 1.25fr;
+              justify-content: center;
+              align-items: center;
+              justify-content: space-evenly;
+              font-family: "Sniglet", system-ui;
+              img {
+                width: 0px;
+                height: 0px;
+              }
+              span {
+                @include flex();
+              }
+            }
+            .dayValues {
+              height: 0px;
+              width: 0px;
+              font-size: 0px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              span {
+                font-family: "Radio Canada", sans-serif;
+                @include flex();
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

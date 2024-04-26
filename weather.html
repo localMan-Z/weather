@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="stylesheet" href="weather.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  </head>
+  <body>
+    <main id="weatherBox">
+      <div id="weatherContent">
+        <form action="" method="post">
+          <input type="text" name="weatherSearch" id="locationInput" />
+          <button type="button" id="RandomLocation">
+            <ion-icon name="earth-outline"></ion-icon>
+          </button>
+        </form>
+        <div id="buttonBox"></div>
+        <div id="weatherDisplay">
+          <div id="general">
+            <div id="location">
+              <div id="Input">
+                <div id="input1">Malaga</div>
+                <div id="input2">Chances of rain 0</div>
+              </div>
+              <div id="temperature">33&deg;</div>
+            </div>
+            <div id="weatherImage">
+              <img src="sun_869869.png" alt="weatherImage" />
+            </div>
+          </div>
+          <div id="otherConditions">
+            <div id="wind">
+              <div class="condition">Wind</div>
+              <div class="image">
+                <img src="wind_1146911.png" alt="wind" />
+              </div>
+              <div id="windValue" class="numberValue">22</div>
+            </div>
+            <div id="humidity">
+              <div class="condition">Humidity</div>
+              <div class="image">
+                <img src="humidity_7687104.png" alt="humidity" />
+              </div>
+              <div id="HumidityValue" class="numberValue">12</div>
+            </div>
+            <div id="pressure">
+              <div class="condition">Pressure</div>
+              <div class="image">
+                <img src="mountain_4619219.png" alt="pressure" />
+              </div>
+              <div id="pressureValue" class="numberValue">111</div>
+            </div>
+          </div>
+          <div id="futureForecast">
+            <div class="day" id="tomorrow">
+              <div class="time">Tomorrow</div>
+              <div class="secondClass" id="tomorrowAppearance">
+                <img src="" alt="Ta" />
+                <span id="tomorrowDescription">Hot</span>
+              </div>
+              <div class="dayValues" id="tomorrowValues">
+                <span id="tomorrowMainValue">22</span>
+                /
+                <span id="tomorrowsecondaryValue">23</span>
+              </div>
+            </div>
+            <div class="day" id="afterTomorrow">
+              <div class="time">AfterTomorrow</div>
+              <div class="secondClass" id="afterTomorrowAppearance">
+                <img src="" alt="ata" />
+                <span id="afterTomorrowDescription">Humid</span>
+              </div>
+              <div class="dayValues" id="afterTomorrowValues">
+                <span id="afterTomorrowMainValue">33</span>
+                /
+                <span id="afterTomorrowsecondaryValue">34</span>
+              </div>
+            </div>
+            <div class="day" id="afterNext">
+              <div class="time">Next Day</div>
+              <div class="secondClass" id="appearance">
+                <img src="" alt="na" />
+                <span id="nextDescription">warm</span>
+              </div>
+              <div class="dayValues" id="nextValues">
+                <span id="nextMainValue">32</span>
+                /
+                <span id="nextSecondaryValue">45</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="weather.mjs"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script
+      type="module"
+      src="node_modules/chroma-js/chroma-light.min.js"
+    ></script>
+  </body>
+</html>

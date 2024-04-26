@@ -1,0 +1,308 @@
+html {
+  background: linear-gradient(30deg, #0575e6, #021b79);
+}
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+svg {
+  padding: 1rem;
+}
+
+.clear-day {
+  animation: clear-day--sun linear infinite 60s;
+}
+
+@keyframes clear-day--sun {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.clear-night .star:nth-child(1n),
+.cloudy-night .star:nth-child(1n) {
+  animation: night--star 1.5s linear infinite 0.3s;
+}
+.clear-night .star:nth-child(2n),
+.cloudy-night .star:nth-child(2n) {
+  animation: night--star 2s linear infinite 0.5s;
+}
+.clear-night .star:nth-child(3n),
+.cloudy-night .star:nth-child(3n) {
+  animation: night--star 8s linear infinite 0.3s;
+}
+.clear-night .star:nth-child(4n),
+.cloudy-night .star:nth-child(4n) {
+  animation: night--star 3.5s linear infinite 0.5s;
+}
+.clear-night .star:nth-child(5n),
+.cloudy-night .star:nth-child(5n) {
+  animation: night--star 4s linear infinite 0.2s;
+}
+.clear-night .star:nth-child(6n),
+.cloudy-night .star:nth-child(6n) {
+  animation: night--star 7s linear infinite 0.5s;
+}
+
+@keyframes night--star {
+  0%, 10% {
+    opacity: 0;
+  }
+  20%, 80% {
+    opacity: 0.5;
+  }
+  90%, 100% {
+    opacity: 0;
+  }
+}
+.cloudy .cloud {
+  opacity: 0;
+}
+.cloudy .cloud:nth-child(1n) {
+  animation: cloudy--clouds 10s linear infinite 3s;
+}
+.cloudy .cloud:nth-child(2n) {
+  animation: cloudy--clouds 9.5s linear infinite 2.5s;
+}
+
+@keyframes cloudy--clouds {
+  0%, 10% {
+    transform: translateX(-80px);
+    opacity: 0;
+  }
+  20%, 80% {
+    opacity: 0.5;
+  }
+  90%, 100% {
+    transform: translateX(80px);
+    opacity: 0;
+  }
+}
+.fog .fog-line:nth-child(1n) {
+  animation: fog--line 12.5s linear infinite 0.2s;
+}
+.fog .fog-line:nth-child(2n) {
+  animation: fog--line 12.5s linear infinite 0.4s;
+}
+.fog .fog-line:nth-child(3n) {
+  animation: fog--line 11.5s linear infinite 0.2s;
+}
+.fog .fog-line:nth-child(4n) {
+  animation: fog--line 10.5s linear infinite 0.5s;
+}
+.fog .fog-line:nth-child(5n) {
+  animation: fog--line 11s linear infinite 0.3s;
+}
+.fog .fog-line:nth-child(6n) {
+  animation: fog--line 12.5s linear infinite 0.3s;
+}
+.fog .fog-line:nth-child(7n) {
+  animation: fog--line 12s linear infinite 0.1s;
+}
+
+@keyframes fog--line {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.cloudy-day .cloudy-day--sun {
+  animation: cloudy-day--sun linear infinite 60s;
+  transform-origin: 19px 19px;
+}
+
+@keyframes cloudy-day--sun {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.cloudy-night .cloudy-night--moon {
+  animation: cloudy-night--moon 20s linear infinite;
+}
+
+@keyframes cloudy-night--moon {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.rain .rain--drops path:nth-child(1n),
+.sleet .rain--drops path:nth-child(1n),
+.snow .rain--drops path:nth-child(1n) {
+  animation: rain--drops 2.5s linear infinite 0.3s;
+}
+.rain .rain--drops path:nth-child(2n),
+.sleet .rain--drops path:nth-child(2n),
+.snow .rain--drops path:nth-child(2n) {
+  animation: rain--drops 3s linear infinite 0.2s;
+}
+.rain .rain--drops path:nth-child(3n),
+.sleet .rain--drops path:nth-child(3n),
+.snow .rain--drops path:nth-child(3n) {
+  animation: rain--drops 3.5s linear infinite 0.2s;
+}
+.rain .rain--drops path:nth-child(4n),
+.sleet .rain--drops path:nth-child(4n),
+.snow .rain--drops path:nth-child(4n) {
+  animation: rain--drops 1.5s linear infinite 0.3s;
+}
+.rain .rain--drops path:nth-child(5n),
+.sleet .rain--drops path:nth-child(5n),
+.snow .rain--drops path:nth-child(5n) {
+  animation: rain--drops 2.5s linear infinite 0.3s;
+}
+.rain .rain--drops path:nth-child(6n),
+.sleet .rain--drops path:nth-child(6n),
+.snow .rain--drops path:nth-child(6n) {
+  animation: rain--drops 1.5s linear infinite 0.5s;
+}
+.rain .rain--drops path:nth-child(7n),
+.sleet .rain--drops path:nth-child(7n),
+.snow .rain--drops path:nth-child(7n) {
+  animation: rain--drops 2.5s linear infinite 0.3s;
+}
+.rain .rain--drops path:nth-child(8n),
+.sleet .rain--drops path:nth-child(8n),
+.snow .rain--drops path:nth-child(8n) {
+  animation: rain--drops 2.5s linear infinite 0.2s;
+}
+.rain .rain--drops path:nth-child(9n),
+.sleet .rain--drops path:nth-child(9n),
+.snow .rain--drops path:nth-child(9n) {
+  animation: rain--drops 3.5s linear infinite 0.5s;
+}
+
+@keyframes rain--drops {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.snow .snow--flakes g:nth-child(1n) {
+  animation: snow--flakes 3s linear infinite 0.2s;
+}
+.snow .snow--flakes g:nth-child(2n) {
+  animation: snow--flakes 2s linear infinite 0.5s;
+}
+.snow .snow--flakes g:nth-child(3n) {
+  animation: snow--flakes 3s linear infinite 0.2s;
+}
+.snow .snow--flakes g:nth-child(4n) {
+  animation: snow--flakes 2s linear infinite 0.5s;
+}
+.snow .snow--flakes g:nth-child(5n) {
+  animation: snow--flakes 2.5s linear infinite 0.2s;
+}
+.snow .snow--flakes g:nth-child(6n) {
+  animation: snow--flakes 2.5s linear infinite 0.5s;
+}
+.snow .snow--flakes g:nth-child(7n) {
+  animation: snow--flakes 1.5s linear infinite 0.3s;
+}
+.snow .snow--flakes g:nth-child(8n) {
+  animation: snow--flakes 3.5s linear infinite 0.1s;
+}
+.snow .snow--flakes g:nth-child(9n) {
+  animation: snow--flakes 3s linear infinite 0.2s;
+}
+
+@keyframes snow--flakes {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.thunderstorm .thunder:nth-child(1n) {
+  animation: thunder 6.5s linear infinite 0.1s;
+}
+.thunderstorm .thunder:nth-child(2n) {
+  animation: thunder 7.5s linear infinite 0.5s;
+}
+.thunderstorm .thunder:nth-child(3n) {
+  animation: thunder 6s linear infinite 0.3s;
+}
+.thunderstorm .thunder:nth-child(4n) {
+  animation: thunder 5.5s linear infinite 0.4s;
+}
+.thunderstorm .thunder:nth-child(5n) {
+  animation: thunder 7.5s linear infinite 0.3s;
+}
+.thunderstorm .thunder:nth-child(6n) {
+  animation: thunder 7.5s linear infinite 0.4s;
+}
+.thunderstorm .thunder:nth-child(7n) {
+  animation: thunder 7.5s linear infinite 0.7s;
+}
+.thunderstorm .thunder:nth-child(8n) {
+  animation: thunder 7s linear infinite 0.1s;
+}
+.thunderstorm .thunder:nth-child(9n) {
+  animation: thunder 6.5s linear infinite 0.6s;
+}
+
+@keyframes thunder {
+  0% {
+    opacity: 0;
+  }
+  49% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.wind .wind-1,
+.wind .wind-2 {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.wind .wind-1 {
+  animation: wind-1 0.5s infinite linear;
+  stroke-dasharray: 10;
+  stroke-dashoffset: 0;
+}
+.wind .wind-2 {
+  opacity: 0.5;
+  animation: wind-2 0.5s infinite linear;
+  stroke-dasharray: 5;
+  stroke-dashoffset: 20;
+}
+
+@keyframes wind-1 {
+  100% {
+    stroke-dashoffset: 20;
+  }
+}
+@keyframes wind-2 {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}/*# sourceMappingURL=basicWeatherSVG.css.map */

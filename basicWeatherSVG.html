@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="b.css" />
+  </head>
+  <body>
+    <!-- CLEAR DAY -->
+    <svg
+      class="clear-day"
+      width="80"
+      height="80"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        transform="translate(21 21)"
+        stroke="#DFDEED"
+        stroke-width="2"
+        fill="none"
+        fill-rule="evenodd"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <circle cx="19" cy="19" r="10" />
+        <path d="M19 5V0" />
+        <path d="M28.9 9.1l3.535-3.535" />
+        <path d="M33 19h5" />
+        <path d="M28.9 28.9l3.535 3.535" />
+        <path d="M19 33v5" />
+        <path d="M9.1 28.9l-3.535 3.535" />
+        <path d="M5 19H0" />
+        <path d="M9.1 9.1L5.566 5.566" />
+      </g>
+    </svg>
+
+    <!-- CLEAR NIGHT -->
+    <svg
+      class="clear-night"
+      width="80"
+      height="80"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g transform="translate(5 14)" fill="none" fill-rule="evenodd">
+        <path
+          d="M19 25.36c0 10.55 8.552 19.103 19.102 19.103 9.559 0 17.538-7.043 18.898-16.297a19.036 19.036 0 0 1-7.982 1.743c-10.55 0-19.102-8.553-19.102-19.102 0-.946.068-1.884.204-2.807A19.11 19.11 0 0 0 19 25.36z"
+          stroke="#DFDEED"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <circle
+          class="star"
+          fill="#DFDEED"
+          fill-rule="nonzero"
+          cx="57.5"
+          cy="1.5"
+          r="1.5"
+        />
+        <circle
+          class="star"
+          fill="#DFDEED"
+          fill-rule="nonzero"
+          cx="17.5"
+          cy="43.5"
+          r="1.5"
+        />
+        <circle
+          class="star"
+          fill="#DFDEED"
+          fill-rule="nonzero"
+          cx="68"
+          cy="12"
+          r="2"
+        />
+        <circle
+          class="star"
+          fill="#DFDEED"
+          fill-rule="nonzero"
+          cx="1.5"
+          cy="12.5"
+          r="1.5"
+        />
+        <circle
+          class="star"
+          fill="#DFDEED"
+          fill-rule="nonzero"
+          cx="7"
+          cy="8"
+          r="1"
+        />
+        <circle
+          class="star"
+          fill="#DFDEED"
+          fill-rule="nonzero"
+          cx="67"
+          cy="52"
+          r="1"
+        />
+      </g>
+    </svg>
+
+    <!-- CLOUDY -->
+    <svg
+      class="cloudy"
+      width="80"
+      height="80"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <defs>
+        <clipPath id="clipping">
+          <path
+            d="M80 0v80H0V0h80zM36 27c-5.523 0-10 4.477-10 10 0 .652.062 1.294.185 1.92a1 1 0 0 1-.81 1.177A6.502 6.502 0 0 0 26.5 53h23a8.5 8.5 0 1 0-2.345-16.672 1 1 0 0 1-1.265-.814C45.166 30.648 40.97 27 36 27z"
+            fill="#D8D8D8"
+          />
+        </clipPath>
+      </defs>
+      <g fill="none" fill-rule="evenodd" clip-path="url(#clipping)">
+        <path
+          d="M36 26c5.52 0 10.09 4.066 10.88 9.366A9.5 9.5 0 1 1 49.5 54h-23a7.5 7.5 0 0 1-1.297-14.888A10.972 10.972 0 0 1 25 37c0-6.075 4.925-11 11-11z"
+          stroke="#DFDEED"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          class="cloud"
+          d="M19.512 45c2.5 0 4.715 1.221 6.081 3.1a6.17 6.17 0 1 1 2.236 11.924h-8.317a7.512 7.512 0 1 1 0-15.024z"
+          stroke="#DFDEED"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          class="cloud"
+          d="M47.268 19c3.75 0 7.073 1.832 9.122 4.65a9.243 9.243 0 0 1 3.354-.626 9.256 9.256 0 1 1 0 18.513H47.268C41.045 41.537 36 36.492 36 30.268 36 24.045 41.045 19 47.268 19z"
+          stroke="#DFDEED"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </g>
+    </svg>
+
+    <!-- FOG -->
+    <svg class="fog" width="80" height="80" xmlns="http://www.w3.org/2000/svg">
+      <g
+        stroke="#DFDEED"
+        stroke-width="2"
+        fill="none"
+        fill-rule="evenodd"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="M20.5 42a7.498 7.498 0 0 1 4.703-2.888A10.972 10.972 0 0 1 25 37c0-6.075 4.925-11 11-11 5.52 0 10.09 4.066 10.88 9.366A9.487 9.487 0 0 1 49.5 35c4.382 0 8.07 2.966 9.168 7"
+        />
+        <path class="fog-line" d="M20 54h25" />
+        <path class="fog-line" d="M49 54h13" />
+        <path class="fog-line" d="M18 50h41" />
+        <path class="fog-line" d="M20 46h17" />
+        <path class="fog-line" d="M41 46h20" />
+      </g>
+    </svg>
+
+    <!-- CLOUDY DAY -->
+    <svg
+      class="cloudy-day"
+      width="80"
+      height="80"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <defs>
+        <clipPath id="clipping--cloudy-day">
+          <path
+            d="M80 0v80H0V0h80zM45 34c-5.523 0-10 4.477-10 10 0 .652.062 1.294.185 1.92a1 1 0 0 1-.81 1.177A6.502 6.502 0 0 0 35.5 60h23a8.5 8.5 0 1 0-2.345-16.672 1 1 0 0 1-1.265-.814C54.166 37.648 49.97 34 45 34z"
+            fill="#D8D8D8"
+          />
+        </clipPath>
+      </defs>
+      <g fill="none" fill-rule="evenodd" clip-path="url(#clipping--cloudy-day)">
+        <g
+          stroke="#DFDEED"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        >
+          <path
+            d="M45 33c5.52 0 10.09 4.066 10.88 9.366A9.5 9.5 0 1 1 58.5 61h-23a7.5 7.5 0 0 1-1.297-14.888A10.972 10.972 0 0 1 34 44c0-6.075 4.925-11 11-11z"
+          />
+          <g transform="translate(12 20)">
+            <g class="cloudy-day--sun">
+              <circle cx="19" cy="19" r="10" />
+              <path d="M19 5V0" />
+              <path d="M28.9 9.1l3.535-3.535" />
+              <path d="M33 19h5" />
+              <path d="M28.9 28.9l3.535 3.535" />
+              <path d="M19 33v5" />
+              <path d="M9.1 28.9l-3.535 3.535" />
+              <path d="M5 19H0" />
+              <path d="M9.1 9.1L5.566 5.566" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </svg>
+
+    <!-- CLOUDY NIGHT -->
+    <svg
+      class="cloudy-night"
+      width="80"
+      height="80"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <defs>
+        <clipPath id="clipping--cloudy-night">
+          <path
+            d="M80 0v80H0V0h80zM33 35c-5.523 0-10 4.477-10 10 0 .652.062 1.294.185 1.92a1 1 0 0 1-.81 1.177A6.502 6.502 0 0 0 23.5 61h23a8.5 8.5 0 1 0-2.345-16.672 1 1 0 0 1-1.265-.814C42.166 38.648 37.97 35 33 35z"
+            fill="#D8D8D8"
+          />
+        </clipPath>
+      </defs>
+      <g
+        fill="none"
+        fill-rule="evenodd"
+        clip-path="url(#clipping--cloudy-night)"
+      >
+        <g transform="translate(5 14)">
+          <path
+            d="M28 20c5.52 0 10.09 4.066 10.88 9.366A9.5 9.5 0 1 1 41.5 48h-23a7.5 7.5 0 0 1-1.297-14.888A10.972 10.972 0 0 1 17 31c0-6.075 4.925-11 11-11z"
+            stroke="#DFDEED"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            class="cloudy-night--moon"
+            d="M27 20.36c0 10.55 8.552 19.103 19.102 19.103 9.559 0 17.538-7.043 18.898-16.297a19.036 19.036 0 0 1-7.982 1.743c-10.55 0-19.102-8.553-19.102-19.102 0-.946.068-1.884.204-2.807A19.11 19.11 0 0 0 27 20.36z"
+            stroke="#DFDEED"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <circle
+            class="star"
+            fill="#DFDEED"
+            fill-rule="nonzero"
+            cx="57.5"
+            cy="1.5"
+            r="1.5"
+          />
+          <circle
+            class="star"
+            fill="#DFDEED"
+            fill-rule="nonzero"
+            cx="6.5"
+            cy="46.5"
+            r="1.5"
+          />
+          <circle
+            class="star"
+            fill="#DFDEED"
+            fill-rule="nonzero"
+            cx="68"
+            cy="12"
+            r="2"
+          />
+          <circle
+            class="star"
+            fill="#DFDEED"
+            fill-rule="nonzero"
+            cx="1.5"
+            cy="12.5"
+            r="1.5"
+          />
+          <circle
+            class="star"
+            fill="#DFDEED"
+            fill-rule="nonzero"
+            cx="7"
+            cy="8"
+            r="1"
+          />
+          <circle
+            class="star"
+            fill="#DFDEED"
+            fill-rule="nonzero"
+            cx="67"
+            cy="52"
+            r="1"
+          />
+        </g>
+      </g>
+    </svg>
+
+    <!-- RAIN -->
+    <svg class="rain" width="80" height="80" xmlns="http://www.w3.org/2000/svg">
+      <g
+        stroke="#DFDEED"
+        stroke-width="2"
+        fill="none"
+        fill-rule="evenodd"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="M37 14c5.52 0 10.09 4.066 10.88 9.366A9.5 9.5 0 1 1 50.5 42h-23a7.5 7.5 0 0 1-1.297-14.888A10.972 10.972 0 0 1 26 25c0-6.075 4.925-11 11-11z"
+        />
+        <g class="rain--drops">
+          <path d="M29.84 49.938l-1 1.732" />
+          <path d="M26.84 55.134l-1 1.732" />
+          <path d="M23.84 60.33l-1 1.732" />
+          <path d="M47.33 49.644l-1 1.732" />
+          <path d="M44.33 54.84l-1 1.732" />
+          <path d="M41.33 60.036l-1 1.732" />
+          <path d="M38.768 50.474l-1 1.732" />
+          <path d="M35.768 55.67l-1 1.732" />
+          <path d="M32.768 60.866l-1 1.732" />
+        </g>
+      </g>
+    </svg>
+
+    <!-- SLEET -->
+    <svg
+      class="sleet"
+      width="80"
+      height="80"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        stroke="#DFDEED"
+        stroke-width="2"
+        fill="none"
+        fill-rule="evenodd"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="M38 11c5.52 0 10.09 4.066 10.88 9.366A9.5 9.5 0 1 1 51.5 39h-23a7.5 7.5 0 0 1-1.297-14.888A10.972 10.972 0 0 1 27 22c0-6.075 4.925-11 11-11z"
+        />
+        <g class="rain--drops">
+          <path d="M31.59 46.407l-2.5 4.33" />
+          <path d="M24.59 58.531l-2.5 4.33" />
+          <path d="M27.09 54.201l-.5.866" />
+          <path d="M50.08 46.113l-2.5 4.33" />
+          <path d="M43.08 58.237l-2.5 4.33" />
+          <path d="M45.58 53.907l-.5.866" />
+          <path d="M40.652 46.443l-2.5 4.33" />
+          <path d="M33.652 58.567l-2.5 4.33" />
+          <path d="M36.152 54.237l-.5.866" />
+        </g>
+      </g>
+    </svg>
+
+    <!-- SNOW -->
+    <svg class="snow" width="80" height="80" xmlns="http://www.w3.org/2000/svg">
+      <g
+        fill="none"
+        fill-rule="evenodd"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke="#DFDEED"
+        stroke-width="2"
+      >
+        <path
+          d="M37 11c5.52 0 10.09 4.066 10.88 9.366A9.5 9.5 0 1 1 50.5 39h-23a7.5 7.5 0 0 1-1.297-14.888A10.972 10.972 0 0 1 26 22c0-6.075 4.925-11 11-11z"
+        />
+        <g class="snow--flakes">
+          <g>
+            <path d="M40.33 65.5l-2 3.464" />
+            <path d="M41.062 68.232l-3.464-2" />
+          </g>
+          <g>
+            <path d="M45.83 55.974l-2 3.464" />
+            <path d="M46.562 58.706l-3.464-2" />
+          </g>
+          <g>
+            <path d="M51.33 46.447l-2 3.465" />
+            <path d="M52.062 49.18l-3.464-2" />
+          </g>
+          <g>
+            <path d="M29.585 64.964l-2 3.464" />
+            <path d="M30.317 67.696l-3.464-2" />
+          </g>
+          <g>
+            <path d="M35.085 55.438l-2 3.464" />
+            <path d="M35.817 58.17l-3.464-2" />
+          </g>
+          <g>
+            <path d="M40.585 45.912l-2 3.464" />
+            <path d="M41.317 48.644l-3.464-2" />
+          </g>
+          <g>
+            <path d="M18.84 64.794l-2 3.464" />
+            <path d="M19.572 67.526l-3.464-2" />
+          </g>
+          <g>
+            <path d="M24.34 55.268l-2 3.464" />
+            <path d="M25.072 58l-3.464-2" />
+          </g>
+          <g>
+            <path d="M29.84 45.742l-2 3.464" />
+            <path d="M30.572 48.474l-3.464-2" />
+          </g>
+        </g>
+      </g>
+    </svg>
+
+    <!-- THUNDERSTORM -->
+    <svg
+      class="thunderstorm"
+      width="80"
+      height="80"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+    >
+      <path
+        stroke="#DFDEED"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M33 42h-5.5c-1.8774.0014-3.6871-.7013-5.0716-1.9694-1.3844-1.2681-2.2429-3.0093-2.4058-4.8797-.163-1.8703.3815-3.7338 1.5258-5.2222s2.8052-2.4935 4.6546-2.8167c-.1357-.6958-.2037-1.4031-.203-2.112 0-6.075 4.925-11 11-11 5.52 0 10.09 4.066 10.88 9.366 1.3063-.3735 2.6774-.4624 4.021-.2609 1.3436.2016 2.6282.689 3.7674 1.4294 1.1392.7403 2.1063 1.7164 2.8361 2.8623.7298 1.146 1.2053 2.4351 1.3945 3.7805.1891 1.3454.0875 2.7156-.298 4.0184-.3855 1.3028-1.0459 2.5077-1.9368 3.5334-.8908 1.0258-1.9913 1.8486-3.2272 2.4128-1.2359.5643-2.5784.8569-3.937.8581H49"
+      />
+      <path
+        class="thunder"
+        stroke="#DFDEED"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="m37 40-3 12h4.5L36 63l10-15h-4l4-8h-9Z"
+        clip-rule="evenodd"
+      />
+    </svg>
+
+    <!-- WIND -->
+    <svg class="wind" width="80" height="80" xmlns="http://www.w3.org/2000/svg">
+      <g
+        stroke="#DFDEED"
+        stroke-width="2"
+        fill="none"
+        fill-rule="evenodd"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path class="wind-1" d="M57 22a7 7 0 0 1 0 14H28" />
+        <path class="wind-1" d="M49 56a7 7 0 0 0 0-14H16" />
+        <path class="wind-2" d="M22 30h30" />
+        <path class="wind-2" d="M22 48h17a5 5 0 0 1 0 10" />
+      </g>
+    </svg>
+  </body>
+</html>
