@@ -130,4 +130,6 @@ export function futureForecast() {
       nextValuesSecondary.textContent = `${celsius(nextlowestTemperature)}`;
     }
   }
+
+  return { generateFutureForecast, updateFutureForecastElements };
 }

@@ -76,4 +76,5 @@ export function colors() {
     }
     return { backgroundColor, colorGradient, a };
   }
+  return { assignColor };
 }
