@@ -1,7 +1,7 @@
 export function futureForecast() {
   async function generateFutureForecast(latitude, longitude) {
-    const API_key = "a8692d5f5ce6627de14a0bf1f065f405";
-    const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${latitude}&lon=${longitude}&exclude=minutely,hourly,alerts&appid=${API_key}`;
+    const apiKey = "3ac0b96aaf484766a22172235240503";
+    const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${latitude}&lon=${longitude}&exclude=minutely,hourly,alerts&appid=${apiKey}`;
     try {
       const response = await fetch(url);
       const data = await response.json();

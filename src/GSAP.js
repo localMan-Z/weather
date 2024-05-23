@@ -1,9 +1,18 @@
+import { location } from "./location.js";
+import { htmlElements } from "./html.js";
+import { colors } from "./color.js";
 export function phaseFunctions() {
-  const phaseOneTimeline = gsap.timeline();
-  const phaseTwoTimeline = gsap.timeline();
-  const phaseThreeTimeline = gsap.timeline();
-
-  function phaseOne() {
+  let locationTimer = false;
+  let locationDataCollected = "";
+  let { generateLocation } = location();
+  let { assignColor } = colors();
+  let { after, parselocationsButton, displayedLocation, inputOne, inputTwo } =
+    htmlElements();
+  let phaseOneTimeline = gsap.timeline();
+  let phaseTwoTimeline = gsap.timeline();
+  let phaseThreeTimeline = gsap.timeline();
+  let alternatePhaseOneTimeline = false;
+  async function phaseOne() {
     alternatePhaseOneTimeline = false;
     if (weatherBox.offsetHeight == 680) {
       phaseOneTimeline.to(weatherDisplay, {
@@ -21,9 +30,19 @@ export function phaseFunctions() {
         height: "70.2px",
         ease: "linear",
         onComplete: () => {
-          generateLocation();
+          locationTimer = true;
         },
       });
+
+    if (locationTimer) {
+      try {
+        locationDataCollected = await generateLocation();
+        console.log(locationDataCollected);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    return locationDataCollected;
   }
 
   function phaseTwo() {
@@ -57,7 +76,7 @@ export function phaseFunctions() {
       );
   }
 
-  function phaseThree() {
+  function phaseThree(temperaturePassed) {
     phaseThreeTimeline
       .to(
         [
@@ -112,8 +131,9 @@ export function phaseFunctions() {
           width: "30px",
           height: "30px",
           onComplete: () => {
-            const { backgroundColor, colorGradient, a } =
+            let { backgroundColor, colorGradient, a } =
               assignColor(temperaturePassed);
+            console.log(colorGradient);
             phaseThreeTimeline.to(weatherBox, {
               duration: 0.5,
               background: `linear-gradient(to bottom, ${colorGradient[0]} , ${colorGradient[1]} , ${colorGradient[2]} )`,
@@ -125,5 +145,5 @@ export function phaseFunctions() {
       );
   }
 
-  return { phaseOne, phaseTwo, phaseThree };
+  return { phaseOne, phaseTwo, phaseThree, alternatePhaseOneTimeline };
 }

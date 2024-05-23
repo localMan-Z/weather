@@ -1,49 +1,49 @@
 export function htmlElements() {
   let weatherBox = document.querySelector("#weatherBox");
   let weatherContent = document.querySelector("#weatherContent");
-  const [form, after, weatherDisplay] = [
+  let [form, after, weatherDisplay] = [
     ...Array.from(weatherBox.querySelector("#weatherContent").children),
   ];
-  const [aInput, parselocationsButton] = [...Array.from(form.children)];
-  const searchedValue = form.querySelector("input");
-  const [general, otherConditions, futureForecast] = [
+  let [aInput, parselocationsButton] = [...Array.from(form.children)];
+  let searchedValue = form.querySelector("input");
+  let [general, otherConditions, futureForecast] = [
     ...Array.from(weatherDisplay.children),
   ];
-  const [displayedLocation, weatherImage] = [...Array.from(general.children)];
-  const [Input, temperature] = [...Array.from(displayedLocation.children)];
-  const [inputOne, inputTwo] = [...Array.from(Input.children)];
-  const imageElement = weatherImage.querySelector("img");
-  const [Wind, Humidity, Pressure] = [...Array.from(otherConditions.children)];
-  const [, windImage, windValue] = [...Array.from(Wind.children)];
-  const [, humidityImage, humidityValue] = [...Array.from(Humidity.children)];
-  const [, pressureImage, pressureValue] = [...Array.from(Pressure.children)];
-  const [tomorrow, AfterTomorrow, Next] = [
+  let [displayedLocation, weatherImage] = [...Array.from(general.children)];
+  let [Input, temperature] = [...Array.from(displayedLocation.children)];
+  let [inputOne, inputTwo] = [...Array.from(Input.children)];
+  let imageElement = weatherImage.querySelector("img");
+  let [Wind, Humidity, Pressure] = [...Array.from(otherConditions.children)];
+  let [, windImage, windValue] = [...Array.from(Wind.children)];
+  let [, humidityImage, humidityValue] = [...Array.from(Humidity.children)];
+  let [, pressureImage, pressureValue] = [...Array.from(Pressure.children)];
+  let [tomorrow, AfterTomorrow, Next] = [
     ...Array.from(futureForecast.children),
   ];
-  const [, tomorrowAppearance, tomorrowValues] = [
+  let [, tomorrowAppearance, tomorrowValues] = [
     ...Array.from(tomorrow.children),
   ];
-  const [tomorrowAppearanceImage, tomorrowAppearanceDescription] = [
+  let [tomorrowAppearanceImage, tomorrowAppearanceDescription] = [
     ...Array.from(tomorrowAppearance.children),
   ];
-  const [tomorrowValuesMain, tomorrowValuesSecondary] = [
+  let [tomorrowValuesMain, tomorrowValuesSecondary] = [
     ...Array.from(tomorrowValues.children),
   ];
-  const [, AfterTomorrowAppearance, AfterTomorrowValues] = [
+  let [, AfterTomorrowAppearance, AfterTomorrowValues] = [
     ...Array.from(AfterTomorrow.children),
   ];
-  const [AfterTomorrowAppearanceImage, AfterTomorrowAppearanceDescription] = [
+  let [AfterTomorrowAppearanceImage, AfterTomorrowAppearanceDescription] = [
     ...Array.from(AfterTomorrowAppearance.children),
   ];
-  const [AfterTomorrowValuesMain, AfterTomorrowValuesSecondary] = [
+  let [AfterTomorrowValuesMain, AfterTomorrowValuesSecondary] = [
     ...Array.from(AfterTomorrowValues.children),
   ];
 
-  const [, nextAppearance, nextValues] = [...Array.from(Next.children)];
-  const [nextAppearanceImage, nextAppearanceDescription] = [
+  let [, nextAppearance, nextValues] = [...Array.from(Next.children)];
+  let [nextAppearanceImage, nextAppearanceDescription] = [
     ...Array.from(nextAppearance.children),
   ];
-  const [nextValuesMain, nextValuesSecondary] = [
+  let [nextValuesMain, nextValuesSecondary] = [
     ...Array.from(nextValues.children),
   ];
   let parentImagePool = [

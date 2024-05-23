@@ -1,5 +1,5 @@
 export function location() {
-  function generateLocation() {
+  async function generateLocation() {
     if (after.hasChildNodes()) {
       after.innerHTML = "";
     }
@@ -12,6 +12,7 @@ export function location() {
     longitude = parseInt(Math.random() * constant);
     lA = latitude;
     lB = longitude;
+
     async function getWeatherFromApi() {
       const API_key = "a8692d5f5ce6627de14a0bf1f065f405";
       const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${latitude}&lon=${longitude}&exclude=minutely,hourly,alerts&appid=${API_key}`;
@@ -37,6 +38,7 @@ export function location() {
         console.error(error);
       }
     }
+
     async function getLocationFromApi() {
       const apiKey = "AIzaSyBLNnudWR7dDY8Q2EWdLh0pBs6TGDyd6fw";
       const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&sensor=true&key=${apiKey}`;
@@ -67,9 +69,16 @@ export function location() {
         console.error(error);
       }
     }
-    Promise.all([getWeatherFromApi(), getLocationFromApi()]).then((values) => {
-      search(values, randomCityGenerated, lA, lB);
-    });
+
+    try {
+      const values = await Promise.all([
+        getWeatherFromApi(),
+        getLocationFromApi(),
+      ]);
+      return { values, randomCityGenerated, lA, lB };
+    } catch (error) {
+      throw error;
+    }
   }
   function parselocations(
     locationB,
@@ -101,4 +110,6 @@ export function location() {
       description,
     };
   }
+
+  return { generateLocation };
 }
